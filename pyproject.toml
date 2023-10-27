@@ -1,0 +1,59 @@
+[tool.poetry]
+name = "placeholder"
+version = "0.0.0"   # keep as 0.0.0 placeholder for poetry-dynamic-versioning
+description = "add description"
+license = "Proprietary"
+authors = ["Tim Robin <trob247365@gmail.com>", ]
+readme = "README.md"
+packages = [
+    {include = "placeholder", from = "src"},
+]
+
+#[tool.poetry.scripts]
+
+[tool.poetry.dependencies]
+python = "~3.12"
+
+
+### our private packages ###
+# library standard base classes that enforce some specific behavior and other common things
+
+# to speed up resolution
+pydantic = { version = "~1" }
+
+
+[tool.poetry.dev-dependencies]
+# linter
+ruff = { version = "*", extras = [] }
+
+# mypy for static type checking
+mypy = { version = "*", extras = [] }
+
+# unit tests
+pytest = { version = "*", extras = [] }
+pytest-cov = { version = "*", extras = [] }
+pytest-mock = { version = "*", extras = [] }
+pytest-timeout = { version = "*", extras = [] }
+pytest-sugar = { version = "*", extras = [] }
+mock = { version = "*", extras = [] }
+
+# docs
+sphinx = { version = "*", extras = [] }
+sphinxcontrib-napoleon = { version = "*", extras = [] }
+autodoc_pydantic = { version = "*", extras = [] }
+sphinx_rtd_theme = { version = "*", extras = [] }
+
+# jupyter lab
+ipykernel = { version = "*", extras = [] }
+jupyterlab = { version = "*", extras = [] }
+ipywidgets = { version = "*", extras = [] }
+jupyterlab_widgets = { version = "*", extras = [] }
+
+[tool.poetry-dynamic-versioning]
+enable = false
+vcs = "git"
+style = "semver"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
