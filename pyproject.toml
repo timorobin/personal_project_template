@@ -14,9 +14,8 @@ packages = [
 [tool.poetry.dependencies]
 python = "~3.12"
 
-
-### our private packages ###
 pydantic = { version = "*" }
+loguru = { version = "*" }
 
 ## API's
 #uvicorn = { version = "*", extras = ["standard"] }
