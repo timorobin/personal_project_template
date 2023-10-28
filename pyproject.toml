@@ -16,11 +16,16 @@ python = "~3.12"
 
 
 ### our private packages ###
-# library standard base classes that enforce some specific behavior and other common things
+pydantic = { version = "*" }
 
-# to speed up resolution
-pydantic = { version = "~1" }
+## API's
+#uvicorn = { version = "*", extras = ["standard"] }
+#httpx = {version = "*", extras = [] }  # needed for testing the fastapi app's
+#fastapi = { version = "*", extras = ["httpx", "python-multipart", "uvicorn"] }
 
+# cli
+typer = { version = "*", extras = ["all"] }
+typer-cli = { version = "*", extras = [] }
 
 [tool.poetry.dev-dependencies]
 # linter
