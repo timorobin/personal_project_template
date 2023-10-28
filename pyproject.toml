@@ -22,9 +22,9 @@ loguru = { version = "*" }
 #httpx = {version = "*", extras = [] }  # needed for testing the fastapi app's
 #fastapi = { version = "*", extras = ["httpx", "python-multipart", "uvicorn"] }
 
-# cli
-typer = { version = "*", extras = ["all"] }
-typer-cli = { version = "*", extras = [] }
+## cli
+#typer = { version = "*", extras = ["all"] }
+#typer-cli = { version = "*", extras = [] }
 
 [tool.poetry.dev-dependencies]
 # linter
